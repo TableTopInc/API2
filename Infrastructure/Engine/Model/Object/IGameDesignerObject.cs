@@ -7,7 +7,6 @@ namespace TableTop.Inc.API.Infrastructure.Engine.Model.General
         string FirstName { get; set; }
         string LastName { get; set; }
         string Bio { get; set; }
-
         string PhotoUrl { get; set; }
     }
 }

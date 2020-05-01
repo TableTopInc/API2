@@ -3,7 +3,7 @@ using TableTop.Inc.API.Infrastructure.Engine.Model.Base;
 
 namespace TableTop.Inc.API.Data.AzureStorage.Table.Model.Base
 {
-    public abstract class EntityModel: TableEntity, IEntityModel
+    public abstract class ObjectBase: TableEntity, IObjectBase
     {
         protected const string DefaultPartition = "";
         
@@ -14,7 +14,7 @@ namespace TableTop.Inc.API.Data.AzureStorage.Table.Model.Base
             set => RowKey = value;
         }
 
-        protected EntityModel()
+        protected ObjectBase()
         {
             PartitionKey = DefaultPartition;
         }

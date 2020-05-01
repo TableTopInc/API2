@@ -1,9 +1,9 @@
 using TableTop.Inc.API.Data.AzureStorage.Table.Model.Base;
-using TableTop.Inc.API.Infrastructure.Engine.Model.General;
+using TableTop.Inc.API.Infrastructure.Engine.Model.Object;
 
 namespace TableTop.Inc.API.Data.AzureStorage.Table.Model.General
 {
-    public sealed class GameDesignerRoleModel: EntityModel, IGameDesignerRoleModel
+    public sealed class TagObject: ObjectBase, ITagObject
     {
         public string Title { get; set; }
     }
