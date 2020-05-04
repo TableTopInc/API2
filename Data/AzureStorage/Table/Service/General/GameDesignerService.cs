@@ -1,30 +1,15 @@
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using TableTop.Inc.API.Data.AzureStorage.Table.Model.General;
+using Microsoft.WindowsAzure.Storage.Table;
+using TableTop.Inc.API.Data.AzureStorage.Table.Model.Base;
+using TableTop.Inc.API.Data.AzureStorage.Table.Model.Object;
 using TableTop.Inc.API.Data.AzureStorage.Table.Service.Base;
 
 namespace TableTop.Inc.API.Data.AzureStorage.Table.Service.General
 {
-    public sealed class GameDesignerService: EntityService<GameDesignerModel>
+    public class GameDesignerService: EntityService<GameDesignerObject>
     {
-        public override async Task<IEnumerable<GameDesignerModel>> GetAllAsync()
+        public GameDesignerService(CloudTable table, string entitiesOwnerId = ObjectBase.DefaultPartitionKey)
+            : base(table, entitiesOwnerId)
         {
-            throw new System.NotImplementedException();
-        }
-
-        public override async Task GetByIdAsync(string id)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public override async Task SaveAsync(GameDesignerModel model)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public override async Task DeleteByIdAsync(string id)
-        {
-            throw new System.NotImplementedException();
         }
     }
 }

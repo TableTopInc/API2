@@ -4,12 +4,11 @@ using TableTop.Inc.API.Infrastructure.Engine.Model.Base;
 
 namespace TableTop.Inc.API.Infrastructure.Engine.Service.Base
 {
-    public interface IEntityService<T> where T: IEntityModel
+    public interface IEntityService<T> where T: IObjectBase
     {
         Task<IEnumerable<T>> GetAllAsync();
-        Task GetByIdAsync(string id);
-        
-        Task SaveAsync(T model);
-        Task DeleteByIdAsync(string id);
+        Task<IEnumerable<T>> GetByIdAsync(params string[] ids);
+        Task<IEnumerable<T>> SaveAsync(params T[] models);
+        Task DeleteByIdAsync(params string[] ids);
     }
 }

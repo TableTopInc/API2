@@ -1,8 +1,8 @@
 using TableTop.Inc.API.Infrastructure.Engine.Model.Base;
 
-namespace TableTop.Inc.API.Infrastructure.Engine.Model.General
+namespace TableTop.Inc.API.Infrastructure.Engine.Model.Object
 {
-    public interface IGameDesignerModel : IEntityModel
+    public interface IGameDesignerObject : IObjectBase
     {
         string FirstName { get; set; }
         string LastName { get; set; }

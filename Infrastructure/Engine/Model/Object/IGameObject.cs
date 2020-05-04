@@ -2,7 +2,7 @@ using TableTop.Inc.API.Infrastructure.Engine.Model.Base;
 
 namespace TableTop.Inc.API.Infrastructure.Engine.Model.Object
 {
-    public interface IGameModel : IEntityModel
+    public interface IGameObject : IObjectBase
     {
         string Title { get; set; }
         string Description { get; set; }

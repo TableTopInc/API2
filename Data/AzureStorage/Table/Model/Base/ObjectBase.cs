@@ -5,7 +5,7 @@ namespace TableTop.Inc.API.Data.AzureStorage.Table.Model.Base
 {
     public abstract class ObjectBase: TableEntity, IObjectBase
     {
-        protected const string DefaultPartition = "";
+        internal const string DefaultPartitionKey = "__shared";
         
         [IgnoreProperty]
         public string Id
@@ -14,9 +14,9 @@ namespace TableTop.Inc.API.Data.AzureStorage.Table.Model.Base
             set => RowKey = value;
         }
 
-        protected ObjectBase()
+        public ObjectBase()
         {
-            PartitionKey = DefaultPartition;
+            PartitionKey = DefaultPartitionKey;
         }
     }
 }
